@@ -87,6 +87,8 @@ function setUpViewChangePipeline(control: FormControl, dir: NgControl): void {
     control._pendingChange = true;
     control._pendingDirty = true;
 
+    // console.log(newValue);
+
     if (control.updateOn === 'change') updateControl(control, dir);
   });
 }
@@ -109,6 +111,8 @@ function updateControl(control: FormControl, dir: NgControl): void {
 
 function setUpModelChangePipeline(control: FormControl, dir: NgControl): void {
   control.registerOnChange((newValue: any, emitModelEvent: boolean) => {
+    // console.log(newValue);
+
     // control -> view
     dir.valueAccessor !.writeValue(newValue);
 

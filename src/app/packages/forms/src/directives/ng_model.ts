@@ -108,8 +108,7 @@ const resolvedPromise = Promise.resolve(null);
   providers: [formControlBinding],
   exportAs: 'ngModel'
 })
-export class NgModel extends NgControl implements OnChanges,
-    OnDestroy {
+export class NgModel extends NgControl implements OnChanges, OnDestroy {
   public readonly control: FormControl = new FormControl();
   /** @internal */
   _registered = false;

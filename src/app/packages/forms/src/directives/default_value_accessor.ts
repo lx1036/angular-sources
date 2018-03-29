@@ -72,6 +72,7 @@ export class DefaultValueAccessor implements ControlValueAccessor {
   }
 
   writeValue(value: any): void {
+    // console.log('writeValue',value);
     const normalizedValue = value == null ? '' : value;
     this._renderer.setProperty(this._elementRef.nativeElement, 'value', normalizedValue);
   }
@@ -86,6 +87,7 @@ export class DefaultValueAccessor implements ControlValueAccessor {
   /** @internal */
   _handleInput(value: any): void {
     if (!this._compositionMode || (this._compositionMode && !this._composing)) {
+      // console.log(value, this.onChange);
       this.onChange(value);
     }
   }

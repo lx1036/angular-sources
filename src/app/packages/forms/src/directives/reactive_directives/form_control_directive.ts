@@ -182,6 +182,7 @@ export class FormControlDirective extends NgControl implements OnChanges {
               }
 
               ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
                 if (this._isControlChanged(changes)) {
                   setUpControl(this.form, this);
                   if (this.control.disabled && this.valueAccessor !.setDisabledState) {

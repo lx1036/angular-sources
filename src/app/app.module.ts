@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import {AppComponent, SimpleFormControl} from './app.component';
-import {FormControl, FormsModule, ReactiveFormsModule, Validators} from './packages/forms';
+import {FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 
 
 @NgModule({

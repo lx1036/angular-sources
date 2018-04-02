@@ -17,7 +17,10 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "@angular/forms": ["app/packages/forms"]
+      "@angular/forms": ["app/packages/forms"],
+      "@angular/core": ["app/packages/core"],
+      "@angular/platform-browser": ["app/packages/platform-browser"],
+      "@angular/platform-browser-dynamic": ["app/packages/platform-browser-dynamic"]
     }
   }
 }

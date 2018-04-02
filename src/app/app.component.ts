@@ -22,7 +22,9 @@ export class SimpleFormControl {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+    template: `
+      <simple-form-control></simple-form-control>
+    `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

@@ -8,12 +8,12 @@ import {FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angula
 
 @NgModule({
   declarations: [
-    AppComponent, SimpleFormControl
+    AppComponent,
+    SimpleFormControl
   ],
   imports: [
     BrowserModule,
-      ReactiveFormsModule,
-
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

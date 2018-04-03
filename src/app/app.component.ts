@@ -25,7 +25,7 @@ export class SimpleFormControl {
     template: `
       <simple-form-control></simple-form-control>
     `,
-  styleUrls: ['./app.component.css']
+  styles: []
 })
 export class AppComponent {
   title = 'app';

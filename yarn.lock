@@ -98,12 +98,6 @@
   optionalDependencies:
     node-sass "^4.7.2"
 
-"@angular/common@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/common/download/@angular/common-6.0.0-rc.1.tgz#dc45ad017fe0eb2d3c4325580f5428b51dbc71f8"
-  dependencies:
-    tslib "^1.9.0"
-
 "@angular/compiler-cli@6.0.0-rc.1":
   version "6.0.0-rc.1"
   resolved "http://registry.npm.taobao.org/@angular/compiler-cli/download/@angular/compiler-cli-6.0.0-rc.1.tgz#3803501e19f70ba9337293ea756e87087c2aded7"
@@ -2763,6 +2757,10 @@ globule@^1.0.0:
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "http://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "http://registry.npm.taobao.org/hammerjs/download/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
 
 handle-thing@^1.2.5:
   version "1.2.5"

@@ -2,25 +2,24 @@
   "extends": "../tsconfig-build.json",
 
   "compilerOptions": {
-    "baseUrl": ".",
     "rootDir": ".",
+    "baseUrl": ".",
     "paths": {
+      "@angular/core": ["../../dist/packages/core"]
     },
-    "outDir": "../../dist/packages/platform-browser"
+    "outDir": "../../dist/packages/common"
   },
 
   "files": [
     "public_api.ts",
-    "../../node_modules/@types/hammerjs/index.d.ts",
-    "../../node_modules/zone.js/dist/zone.js.d.ts",
-    "../goog.d.ts"
+    "../../node_modules/zone.js/dist/zone.js.d.ts"
   ],
 
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": false,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "platform-browser.js",
-    "flatModuleId": "@angular/platform-browser"
+    "flatModuleOutFile": "common.js",
+    "flatModuleId": "@angular/common"
   }
 }

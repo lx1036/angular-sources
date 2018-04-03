@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "mkdir ./node_modules/@angular/core/;ln -s ./src/app/packages/core/package.json ./node_modules/@angular/core/package.json;ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

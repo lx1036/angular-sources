@@ -23,7 +23,7 @@ export class SimpleFormControl {
 @Component({
   selector: 'app-root',
     template: `
-      <simple-form-control></simple-form-control>
+      <p>lx1036</p>
     `,
   styles: []
 })

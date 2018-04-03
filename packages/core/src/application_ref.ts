@@ -85,6 +85,7 @@ export function createPlatform(injector: Injector): PlatformRef {
         'There can be only one platform. Destroy the previous one to create a new one.');
   }
   _platform = injector.get(PlatformRef);
+  console.log(_platform);
   const inits = injector.get(PLATFORM_INITIALIZER, null);
   if (inits) inits.forEach((init: any) => init());
   return _platform;
@@ -103,6 +104,8 @@ export function createPlatformFactory(
   const marker = new InjectionToken(desc);
   return (extraProviders: StaticProvider[] = []) => {
     let platform = getPlatform();
+
+    console.log(platform);
     if (!platform || platform.injector.get(ALLOW_MULTIPLE_PLATFORMS, false)) {
       if (parentPlatformFactory) {
         parentPlatformFactory(

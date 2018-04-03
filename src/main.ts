@@ -9,5 +9,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+// const platformRef = platformBrowserDynamic();
+// console.log(platformRef.injector);
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

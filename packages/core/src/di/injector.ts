@@ -96,6 +96,7 @@ export abstract class Injector {
     if (Array.isArray(options)) {
       return new StaticInjector(options, parent);
     } else {
+      console.log(options);
       return new StaticInjector(options.providers, options.parent, options.name || null);
     }
   }

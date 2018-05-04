@@ -27,9 +27,9 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
-"@angular/animations@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/animations/download/@angular/animations-6.0.0-rc.1.tgz#fefd83733d4ffcf93eff137e5460412ed88dcd0e"
+"@angular/animations@6.0.0":
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/@angular/animations/download/@angular/animations-6.0.0.tgz#cfc825dbfdf33bf3bf75962d1e12495aed5e3c32"
   dependencies:
     tslib "^1.9.0"
 
@@ -98,34 +98,34 @@
   optionalDependencies:
     node-sass "^4.7.2"
 
-"@angular/compiler-cli@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/compiler-cli/download/@angular/compiler-cli-6.0.0-rc.1.tgz#3803501e19f70ba9337293ea756e87087c2aded7"
+"@angular/compiler-cli@6.0.0":
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/@angular/compiler-cli/download/@angular/compiler-cli-6.0.0.tgz#be50277faaa5ac08f3002c2c8cb8c39d220c76d5"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
     tsickle "^0.27.2"
 
-"@angular/compiler@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-6.0.0-rc.1.tgz#cb3451b25e4c77ad3b4a55bff29d65833ac1dbab"
+"@angular/compiler@6.0.0":
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-6.0.0.tgz#9092a0f02f33dd1108276ab93cc48142e36a1e95"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/http@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/http/download/@angular/http-6.0.0-rc.1.tgz#4294be3edaa28a26655d7c298ffd36b0796b9455"
+"@angular/http@6.0.0":
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/@angular/http/download/@angular/http-6.0.0.tgz#f409e35cd2f4990b43a37beab915ffdcd9c7c992"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-6.0.0-rc.1.tgz#02781601e4b55688b9f083c647fd86a566380d71"
+"@angular/language-service@6.0.0":
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-6.0.0.tgz#85bf577fd7f45eff13128d4f5f0125078d610aec"
 
-"@angular/router@6.0.0-rc.1":
-  version "6.0.0-rc.1"
-  resolved "http://registry.npm.taobao.org/@angular/router/download/@angular/router-6.0.0-rc.1.tgz#6cb7bd64b94e93047e529e4c04f5dde8a552dbf9"
+"@angular/router@6.0.0":
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/@angular/router/download/@angular/router-6.0.0.tgz#09a5c6f6220084c3575df81e8b36cbe9fff10d1f"
   dependencies:
     tslib "^1.9.0"
 
@@ -5523,17 +5523,17 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@6.0.0-beta.0:
-  version "6.0.0-beta.0"
-  resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-6.0.0-beta.0.tgz#cf241936be39d8279ed0b2be4bf417777301f65a"
-  dependencies:
-    tslib "^1.9.0"
-
 rxjs@^5.5.6:
   version "5.5.8"
   resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-5.5.8.tgz#b2b0809a57614ad6254c03d7446dea0d83ca3791"
   dependencies:
     symbol-observable "1.0.1"
+
+rxjs@^6.0.0:
+  version "6.1.0"
+  resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-6.1.0.tgz#833447de4e4f6427b9cec3e5eb9f56415cd28315"
+  dependencies:
+    tslib "^1.9.0"
 
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"

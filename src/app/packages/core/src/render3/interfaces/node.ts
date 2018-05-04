@@ -28,22 +28,17 @@ export const enum LNodeType {
 }
 
 /**
- * TNodeFlags corresponds to the TNode.flags property. It contains information
- * on how to map a particular set of bits to the node's first directive index
- * (with INDX_SHIFT) or the node's directive count (with SIZE_MASK)
+ * Corresponds to the TNode.flags property.
  */
 export const enum TNodeFlags {
-  /** Whether or not this node is a component */
-  Component = 0b001,
+  /** The number of directives on this node is encoded on the least significant bits */
+  DirectiveCountMask = 0b00000000000000000000111111111111,
 
-  /** How far to shift the flags to get the first directive index on this node */
-  INDX_SHIFT = 13,
+  /** Then this bit is set when the node is a component */
+  isComponent = 0b1000000000000,
 
-  /** How far to shift the flags to get the number of directives on this node */
-  SIZE_SHIFT = 1,
-
-  /** Mask to get the number of directives on this node */
-  SIZE_MASK = 0b00000000000000000001111111111110
+  /** The index of the first directive on this node is encoded on the most significant bits  */
+  DirectiveStartingIndexShift = 13,
 }
 
 /**
@@ -130,6 +125,11 @@ export interface LNode {
    * data about this node.
    */
   tNode: TNode|null;
+
+  /**
+   * A pointer to a LContainerNode created by directives requesting ViewContainerRef
+   */
+  dynamicLContainerNode: LContainerNode|null;
 }
 
 
@@ -158,6 +158,7 @@ export interface LTextNode extends LNode {
   /** LTextNodes can be inside LElementNodes or inside LViewNodes. */
   readonly parent: LElementNode|LViewNode;
   readonly data: null;
+  dynamicLContainerNode: null;
 }
 
 /** Abstract node which contains root nodes of a view. */
@@ -169,6 +170,7 @@ export interface LViewNode extends LNode {
   /**  LViewNodes can only be added to LContainerNodes. */
   readonly parent: LContainerNode|null;
   readonly data: LView;
+  dynamicLContainerNode: null;
 }
 
 /** Abstract node container which contains other views. */
@@ -199,6 +201,7 @@ export interface LProjectionNode extends LNode {
 
   /** Projections can be added to elements or views. */
   readonly parent: LElementNode|LViewNode;
+  dynamicLContainerNode: null;
 }
 
 /**

@@ -33,14 +33,14 @@ export const COMPOSITION_BUFFER_MODE = new InjectionToken<boolean>('CompositionE
 
 /**
  * The default accessor for writing a value and listening to changes that is used by the
- * {@link NgModel}, {@link FormControlDirective}, and {@link FormControlName} directives.
+ * `NgModel`, `FormControlDirective`, and `FormControlName` directives.
  *
  *  ### Example
  *  ```
  *  <input type="text" name="searchQuery" ngModel>
  *  ```
  *
- *  @stable
+ *
  */
 @Directive({
   selector:
@@ -72,7 +72,6 @@ export class DefaultValueAccessor implements ControlValueAccessor {
   }
 
   writeValue(value: any): void {
-    // console.log('writeValue',value);
     const normalizedValue = value == null ? '' : value;
     this._renderer.setProperty(this._elementRef.nativeElement, 'value', normalizedValue);
   }
@@ -87,7 +86,6 @@ export class DefaultValueAccessor implements ControlValueAccessor {
   /** @internal */
   _handleInput(value: any): void {
     if (!this._compositionMode || (this._compositionMode && !this._composing)) {
-      // console.log(value, this.onChange);
       this.onChange(value);
     }
   }

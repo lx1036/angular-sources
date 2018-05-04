@@ -87,8 +87,6 @@ function setUpViewChangePipeline(control: FormControl, dir: NgControl): void {
     control._pendingChange = true;
     control._pendingDirty = true;
 
-    // console.log(newValue);
-
     if (control.updateOn === 'change') updateControl(control, dir);
   });
 }
@@ -111,8 +109,6 @@ function updateControl(control: FormControl, dir: NgControl): void {
 
 function setUpModelChangePipeline(control: FormControl, dir: NgControl): void {
   control.registerOnChange((newValue: any, emitModelEvent: boolean) => {
-    // console.log(newValue);
-
     // control -> view
     dir.valueAccessor !.writeValue(newValue);
 
@@ -191,9 +187,13 @@ export function selectValueAccessor(
     dir: NgControl, valueAccessors: ControlValueAccessor[]): ControlValueAccessor|null {
   if (!valueAccessors) return null;
 
+  if (!Array.isArray(valueAccessors))
+    _throwError(dir, 'Value accessor was not provided as an array for form control with');
+
   let defaultAccessor: ControlValueAccessor|undefined = undefined;
   let builtinAccessor: ControlValueAccessor|undefined = undefined;
   let customAccessor: ControlValueAccessor|undefined = undefined;
+
   valueAccessors.forEach((v: ControlValueAccessor) => {
     if (v.constructor === DefaultValueAccessor) {
       defaultAccessor = v;
